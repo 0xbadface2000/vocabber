@@ -518,3 +518,100 @@ padding: 5px;
     transform: translateX(-80%);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ensure elements don’t exceed the screen width */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive typography */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+}
+
+/* Make navigation flexible */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid for blog posts */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer fixes */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
