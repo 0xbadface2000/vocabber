@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocabber</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html {
@@ -12,21 +13,18 @@
     </style>
 </head>
 <body class="bg-gray-900 text-white">
-    <header class="fixed top-0 w-full bg-gray-800 bg-opacity-80 backdrop-blur-md p-4 z-10">
-        <nav class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Vocabber</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#home" class="hover:text-blue-400">Home</a></li>
-                <li><a href="blog.html" class="hover:text-blue-400">Blog</a></li>
-                <li><a href="#about" class="hover:text-blue-400">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header"></div>
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('header').innerHTML = html);
+    </script>
 
     <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1600x900');">
-        <div class="text-center">
-            <h2 class="text-5xl font-bold">Welcome to My Blog</h2>
-            <p class="mt-4 text-lg">Explore my latest posts and insights.</p>
+<div class="max-w-3xl mx-auto mt-40 mb-20 p-6 bg-white shadow-lg rounded-2xl">
+    <img src="/media/logo.png" alt="Masthead" class="mx-auto text-center h-40 object-cover rounded-lg">
+    <img src="/media/masthead.png" alt="Masthead" class="w-full h-40 object-cover rounded-lg">
+<p class="mt-4 text-black">Expanding your vocabulary isn’t just about learning new words—it’s about sharpening your ability to express ideas with precision, depth, and nuance. Whether you're a writer striving for richer prose, a student aiming for academic excellence, or a professional seeking to communicate with clarity, a strong vocabulary empowers you to convey thoughts more effectively. Our vocabulary builder is designed to help university-level amateur fiction authors like you discover new words, understand their origins, and master their usage in context. With carefully curated examples and etymological insights, you’ll not only learn words but also gain the confidence to wield them naturally in your writing.</p>
         </div>
     </section>
 
@@ -35,35 +33,26 @@
         <img src="https://source.unsplash.com/random/500x300?nature" alt="Blog Image" class="rounded-lg shadow-lg">
     </section>
 
-    <section id="blog" class="py-20 px-4 text-center">
-        <h2 class="text-4xl font-bold">Latest Blog Posts</h2>
-        <div class="mt-6 flex flex-wrap justify-center gap-6">
-            <div class="bg-gray-700 p-6 rounded-lg w-80 shadow-lg">
-                <h3 class="text-xl font-semibold">Post Title 1</h3>
-                <p class="mt-2">A brief summary of the blog post content.</p>
-                <a href="#" class="text-blue-400 mt-2 inline-block">Read More</a>
-            </div>
-            <div class="bg-gray-700 p-6 rounded-lg w-80 shadow-lg">
-                <h3 class="text-xl font-semibold">Post Title 2</h3>
-                <p class="mt-2">A brief summary of the blog post content.</p>
-                <a href="#" class="text-blue-400 mt-2 inline-block">Read More</a>
-            </div>
-        </div>
-    </section>
+<div id="latest_blog"></div>
+<script>
+    fetch('/latest_blog.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('latest_blog').innerHTML = html);
+</script>
 
-    <section id="about" class="py-20 px-4 text-center">
-        <h2 class="text-4xl font-bold">About Me</h2>
-        <p class="mt-4 max-w-3xl mx-auto">Sharing insights, experiences, and stories through writing.</p>
-    </section>
+    <div id="cta"></div>
+<script>
+    fetch('/cta.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('cta').innerHTML = html);
+</script>
 
-    <section id="contact" class="py-20 px-4 text-center">
-        <h2 class="text-4xl font-bold">Contact Me</h2>
-        <p class="mt-4">Feel free to reach out via email.</p>
-        <a href="mailto:your.email@example.com" class="text-blue-400 text-lg font-semibold">Email Me</a>
-    </section>
 
-    <footer class="py-4 bg-gray-800 text-center">
-        <p>&copy; 2025 My Blog. All rights reserved.</p>
-    </footer>
+<div id="footer"></div>
+<script>
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+</script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabber</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white bg-cover bg-center bg-fixed">
+    <div id="header"></div>
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('header').innerHTML = html);
+    </script>
+
+<div class="max-w-3xl mx-auto mt-32 mb-20 p-6 bg-white shadow-lg rounded-2xl">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">About Vocabber</h2>
+
+    <p class="text-gray-700 leading-relaxed mb-4">
+        This journey started as a personal project to help my daughter expand her vocabulary. I wanted to give her more than just a list of words—I wanted her to understand where they came from, how they evolved, and how to use them naturally. But as I built this tool, something unexpected happened.
+    </p>
+
+    <p class="text-gray-700 leading-relaxed mb-4">
+        Fiction writers, professionals, students, and language enthusiasts began reaching out. They saw value in a vocabulary builder that didn’t just define words but tailored explanations to different levels of mastery. The feedback was overwhelming, and I realized this could help far more people than I had originally intended.
+    </p>
+
+    <p class="text-gray-700 leading-relaxed mb-4">
+        That’s why I made it public. Whether you're a novelist searching for the perfect word, a student refining your academic writing, or a professional striving for more precise communication, this tool is built for you. Words shape how we think, write, and connect with others, and mastering them is one of the most powerful skills you can develop.
+    </p>
+
+    <p class="text-gray-700 leading-relaxed mb-4">
+        What makes this vocabulary builder unique is its use of AI. Instead of generic definitions, it provides explanations tailored to different audiences—ranging from young learners to seasoned authors. You’ll see words broken down in ways that make sense for your level, with engaging examples that bring each term to life.
+    </p>
+
+    <p class="text-gray-700 leading-relaxed">
+        Language is constantly evolving, and so is this project. I’m always improving it based on feedback, adding new words, refining explanations, and making it an even better tool for those passionate about expanding their vocabulary. Thank you for being part of this journey—let’s explore the beauty of language together.
+    </p>
+</div>
+
+<div id="cta"></div>
+<script>
+    fetch('/cta.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('cta').innerHTML = html);
+</script>
+
+<div id="footer"></div>
+<script>
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+</script>
+</body>
+</html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocabber</title>
+    <link rel="stylesheet" href="/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
     .blog-post {
@@ -15,7 +16,6 @@
         max-width: 800px;
         background: #fff;
         padding: 30px;
-        margin: 20%;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
@@ -51,17 +51,13 @@
     }
     </style>
 </head>
-<body class="bg-gray-900 text-white">
-    <header class="fixed top-0 w-full bg-gray-800 bg-opacity-80 backdrop-blur-md p-4 z-10">
-        <nav class="max-w-7xl mx-auto flex justify-between items-center">
-           <a href="index.html"><h1 class="text-2xl font-bold">Vocabber</h1></a>
-            <ul class="flex space-x-6">
-                <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
-                <li><a href="blog.htmk" class="hover:text-blue-400">Blog</a></li>
-                <li><a href="about.html" class="hover:text-blue-400">About</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-900 text-white" style="background-image: url('/media/blog_bg.png');">
+<div id="header"></div>
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('header').innerHTML = html);
+    </script>
 
 <section id="home" class="h-screen flex items-center justify-center relative">
     <!-- Background Overlay -->
@@ -71,16 +67,15 @@
         left: 0; 
         width: 100%; 
         height: 100%; 
-        background-image: url('media/blog_bg.webp'); 
-        background-size: cover; 
+        background-size: cover;
         background-position: center; 
         opacity: 0.05;">
     </div>
 
     <!-- Content -->
     <div style="position: relative; text-align: center;">
-        <img src="media/build.webp" alt="Blog Image" 
-             class="rounded-lg shadow-lg" 
+        <img src="/media/build.webp" alt="Blog Image"
+             class="rounded-lg shadow-lg"
              style="opacity: 0.9; width: 50%; margin: auto; border-radius: 5%; border-color: white;border-width: 5px; margin-top: 40px; margin-bottom: 40px;">
         <h1 class="text-5xl font-bold">Why You Should Build Your Vocabulary</h1>
     </div>
@@ -90,24 +85,35 @@
     <section class="blog-post">
     <div class="container">
         <article>
-            <h2>Why You Should Build Your Vocabulary</h2>
-            <hr>
             <h3>The Power of Words</h3>
             <p>Words are more than just a way to communicate—they shape how we think, express ourselves, and understand the world. A strong vocabulary gives you the tools to articulate your thoughts clearly and confidently. Whether you're writing, speaking, or even thinking, having the right words at your fingertips can make all the difference.</p>
+            <p>Expanding your vocabulary not only enhances your ability to communicate but also deepens your appreciation for language itself. Each word carries its own history, nuance, and emotional weight, allowing you to convey ideas with greater precision and impact. A well-developed vocabulary empowers you to engage in more meaningful conversations, craft compelling stories, and navigate complex topics with confidence. The more words you know, the more vividly and accurately you can bring your thoughts to life.</p>
+
             <h3>Expanding Your Knowledge and Perspective</h3>
             <p>Learning new words isn't just about sounding smart; it's about expanding your understanding of ideas, cultures, and perspectives. Every new word you learn comes with its own history and context, helping you make connections and see the world in new ways. A rich vocabulary opens the door to deeper reading, richer conversations, and a broader worldview.</p>
+            <p>Beyond communication, a strong vocabulary enhances critical thinking and creativity, allowing you to engage with complex ideas and express yourself with nuance. Words shape how we interpret the world, influencing the way we perceive emotions, articulate abstract concepts, and connect with others. By continuously learning new words, you refine your ability to think deeply, appreciate literature, and engage in thoughtful discussions that broaden your horizons.</p>
+
             <h3>Practical Benefits in Everyday Life</h3>
             <p>A strong vocabulary is useful in everyday situations, from writing emails to making persuasive arguments. It helps you communicate more effectively at work, express yourself clearly in social situations, and even understand complex information more easily. The more words you know, the more precise and powerful your communication becomes.</p>
+            <p>In professional settings, a well-developed vocabulary can enhance your credibility, making your ideas more compelling and your arguments more persuasive. In social interactions, it allows you to convey your thoughts with clarity and confidence, fostering deeper connections with others. Even in everyday tasks—whether reading news articles, following instructions, or expressing emotions—having a broad vocabulary ensures that you can navigate the world with ease and precision. Mastering language is not just about knowledge; it’s about unlocking new opportunities in every aspect of life.</p>
+
             <h3>Boosting Creativity and Confidence</h3>
             <p>When you have a broad vocabulary, you’re not just better at expressing yourself—you’re also more creative. The right words can paint vivid pictures, evoke strong emotions, and make your writing or speech more engaging. Plus, knowing you can find the perfect word when you need it gives you confidence in any conversation or setting.</p>
+            <p>Creativity thrives on the ability to explore and articulate ideas in new and compelling ways, and a rich vocabulary provides the building blocks for imaginative expression. Whether you're crafting a story, delivering a speech, or simply engaging in everyday discussions, the right words can bring your thoughts to life with precision and flair. Moreover, the confidence that comes from having a strong command of language allows you to speak and write with authority, making your communication more impactful and persuasive. Expanding your vocabulary isn’t just about words—it’s about unlocking your full potential as a thinker and communicator.</p>
+
             <h3>A Lifelong Journey</h3>
             <p>Building your vocabulary isn’t something you do once and forget—it’s a lifelong journey. Reading widely, looking up unfamiliar words, and challenging yourself with new language exercises can keep your mind sharp and your communication skills strong. The more words you learn, the more power you have to express yourself and connect with others.</p>
+            <p>Expanding your vocabulary is more than just a skill—it’s a gateway to clearer thinking, richer conversations, and a deeper understanding of the world. Every new word you learn adds to your ability to express ideas, connect with others, and engage with knowledge on a more profound level. By embracing lifelong learning, you not only sharpen your mind but also open yourself to endless possibilities for growth and discovery. Language is one of the most powerful tools we have—so keep exploring, keep learning, and let words unlock new horizons for you.</p>
         </article>
     </div>
 </section>
 
-    <footer class="py-4 bg-gray-800 text-center">
-        <p>&copy; 2025 My Blog. All rights reserved.</p>
-    </footer>
+<div id="footer"></div>
+<script>
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+</script>
+
 </body>
 </html>
