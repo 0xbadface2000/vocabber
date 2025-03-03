@@ -20,31 +20,33 @@
             .then(response => response.text())
             .then(html => document.getElementById('header').innerHTML = html);
     </script>
-
-    <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1600x900');">
-<div class="max-w-3xl mx-auto mt-40 mb-20 p-6 bg-white shadow-lg rounded-2xl">
-    <img src="/media/logo.png" alt="Masthead" class="mx-auto text-center h-40 object-cover rounded-lg">
-    <img src="/media/masthead.png" alt="Masthead" class="w-full h-40 object-cover rounded-lg">
-<p class="mt-4 text-black">Expanding your vocabulary isn’t just about learning new words—it’s about sharpening your ability to express ideas with precision, depth, and nuance. Whether you're a writer striving for richer prose, a student aiming for academic excellence, or a professional seeking to communicate with clarity, a strong vocabulary empowers you to convey thoughts more effectively.</p>
-    <p class="mt-4 text-black">Our vocabulary builder is designed to help people from all walks of life to discover new words, understand their origins, and master their usage in context. With carefully curated examples and etymological insights, you’ll not only learn words but also gain the confidence to wield them naturally in your writing and speech.</p>
-        </div>
-    </section>
-
+<section id="home" class="min-h-screen flex items-center justify-center bg-cover bg-center px-0"
+         style="background-image: url('https://source.unsplash.com/random/1600x900');">
+    <div class="w-full sm:max-w-3xl mx-0 sm:mx-auto mt-20 sm:mt-40 mb-10 p-4 sm:p-6 bg-white shadow-lg rounded-none sm:rounded-2xl">
+        <img src="/media/logo.png" alt="Logo"
+             class="pt-16 sm:pt-0 mx-auto h-40 sm:h-48 object-contain rounded-lg">
+        <img src="/media/masthead.png" alt="Masthead"
+             class="w-auto max-w-full h-32 sm:h-40 object-contain mx-auto mt-4">
+        <p class="mt-4 text-black text-sm sm:text-base leading-relaxed">
+            Expanding your vocabulary isn’t just about learning new words—it’s about sharpening your ability to express ideas with precision, depth, and nuance. Whether you're a writer striving for richer prose, a student aiming for academic excellence, or a professional seeking to communicate with clarity, a strong vocabulary empowers you to convey thoughts more effectively.
+        </p>
+        <p class="mt-4 text-black text-sm sm:text-base leading-relaxed">
+            Our vocabulary builder is designed to help people from all walks of life to discover new words, understand their origins, and master their usage in context. With carefully curated examples and etymological insights, you’ll not only learn words but also gain the confidence to wield them naturally in your writing and speech.
+        </p>
+    </div>
+</section>
 <div id="latest_blog"></div>
 <script>
     fetch('/latest_blog.html')
         .then(response => response.text())
         .then(html => document.getElementById('latest_blog').innerHTML = html);
 </script>
-
     <div id="cta"></div>
 <script>
     fetch('/cta.html')
         .then(response => response.text())
         .then(html => document.getElementById('cta').innerHTML = html);
 </script>
-
-
 <div id="footer"></div>
 <script>
     fetch('/footer.html')
