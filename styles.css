@@ -1,7 +1,7 @@
 /* Define Christmas color variables */
 :root {
   --primary-color: #415a77;
-  --secondary-color: #ffffff; /* Snow White */
+  --secondary-color: #000000; /* Snow White */
   --secondary-color-rgb: 255,255,255;
   --background-color: #006400; /* Evergreen */
   --text-color: #000000;
@@ -9,7 +9,7 @@
   --shadow-color: rgba(0, 0, 0, 0.4); /* Deep shadow for depth */
   --glow-color: rgba(2, 62, 138, 0.8); /* Glowing Christmas Red */
   --primary-font: 'Merriweather', serif;
-  --secondary-font: 'Lora', serif;
+  --secondary-font: "Goldman", sans-serif;
   --h2-font: 'PT Serif', serif;
 }
 
@@ -62,9 +62,18 @@ body {
   margin: 0 auto;
 }
 
+h1, h2, h3, h4, h5 {
+    text-align: center;
+    color: black;
+font-family: var(--secondary-font);
+}
+
+h1 {
+    font-size: clamp(2rem, 8vw, 6rem) !important;
+}
+
 h2, h3 {
 text-align: center;
-font-family: var(--h2-font);
 font-size: 4rem;
 color: var(--secondary-color);
 text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color); /* Glowing text shadow */
@@ -207,13 +216,6 @@ background: linear-gradient(
   }
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    z-index: 3;
-    position: relative;
-}
-
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
@@ -351,10 +353,6 @@ img {
 body {
     font-size: 16px;
     line-height: 1.6;
-}
-
-h1 {
-    font-size: 2rem;
 }
 
 h2 {
