@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+    <title>Vocabber</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900" style="background-image: url('/media/blog_bg.png');">
+<div id="header"></div>
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('header').innerHTML = html);
+    </script>
+
+<section id="home" class="h-screen flex items-center justify-center relative">
+    <!-- Background Overlay -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.05;">
+    </div>
+
+    <!-- Content -->
+<div class="w-full flex flex-col items-center relative pt-20 sm:pt-32">
+    <!-- Image Container -->
+    <div class="relative w-full sm:max-w-3xl fade-in">
+        <!-- Blog Image -->
+        <img src="/media/blog/proficient.webp"
+             alt="Blog Image"
+             class="w-full rounded-lg shadow-lg opacity-90 border-4 border-white">
+
+        <!-- Overlay Text -->
+        <h1 class="absolute inset-0 flex items-center justify-center text-3xl sm:text-5xl font-bold text-white text-center px-4 bg-black/50 rounded-lg">
+            Proficient: More Than Skilled
+        </h1>
+    </div>
+</div>
+</section>
+<section class="blog-post">
+    <div class="blog-container">
+        <p>Words shape the way we communicate, think, and express expertise. One such word, <strong>"proficient,"</strong> has long been used to describe skill, competence, and mastery. But where did this word come from, and how has its meaning evolved? In this post, we’ll explore the origins, linguistic journey, and modern usage of "proficient" across five key topics.</p>
+
+        <h3>Latin Roots: A Word for Progress</h3>
+        <p>The story of "proficient" begins in Latin, where it stems from the verb <em>proficere</em>—meaning <strong>"to advance"</strong> or <strong>"to make progress."</strong> This verb is a combination of <em>pro-</em> ("forward") and <em>facere</em> ("to do, to make"). The original meaning of "proficient" wasn’t about mastery but rather about making strides toward expertise.</p>
+        <p>In classical Latin, <em>proficere</em> was commonly used to describe someone improving in a skill or subject. It was about <strong>progress rather than perfection.</strong> This foundational meaning would persist as the word traveled through different languages, eventually making its way into English.</p>
+
+        <h3>The French Connection: From Learning to Mastery</h3>
+        <p>Before "proficient" entered English, it made a stop in Old French as <em>"proficient"</em> (with the same spelling), carrying the same meaning of advancement in knowledge or ability. French influence on English was particularly strong after the Norman Conquest of 1066, which led to the adoption of thousands of French-derived words into English.</p>
+        <p>By the time "proficient" appeared in English in the late 16th century, its meaning had begun to shift. Instead of just referring to someone <strong>progressing</strong> in skill, it started to mean <strong>someone who had reached a high level of expertise</strong>—a subtle but significant change.</p>
+
+        <h3>Early English Usage: From Scholars to Tradesmen</h3>
+        <p>The first recorded use of "proficient" in English appears in the late 1500s, often in academic and literary contexts. Scholars, writers, and educators used the word to describe those who had gained considerable knowledge in a field, whether it was science, philosophy, or the arts.</p>
+        <p>However, as the centuries progressed, "proficient" became more commonly used outside of academia. By the 18th and 19th centuries, it was frequently applied to artisans, musicians, and skilled laborers—anyone who had honed their craft to an impressive level. This broadened the word’s relevance beyond intellectual pursuits.</p>
+
+        <h3>Modern Meaning: Skill Over Progress</h3>
+        <p>Today, "proficient" is widely understood to mean <strong>highly skilled or competent</strong> in a given area. The original sense of <strong>"making progress"</strong> has faded, replaced by the idea of <strong>already having reached</strong> a level of expertise. This shift reflects the way language adapts to societal changes—once, knowledge was seen as a journey; now, we often focus on the end result.</p>
+        <p>In modern contexts, "proficient" is commonly used in resumes and job descriptions, often appearing in phrases like <em>"proficient in Microsoft Excel"</em> or <em>"proficient in Spanish."</em> It denotes <strong>competence but not necessarily mastery</strong>, sitting somewhere between "competent" and "expert" on the scale of ability.</p>
+
+        <h3>The Word in Action: Everyday and Specialized Use</h3>
+        <p>Despite its academic roots, "proficient" remains a versatile and widely used word. In education, it is a key term in grading scales, where students may be rated as "proficient" in a subject—meaning they meet expected competency levels. In professional fields, it indicates a level of skill that is functional and reliable.</p>
+        <p>Interestingly, while "proficient" is still commonly used, it has lost some of its prestige in everyday conversation. People are more likely to say they are "good at" something rather than "proficient." Still, the word remains an essential term in formal writing, job qualifications, and skill assessments.</p>
+
+        <h3>Conclusion: A Word That Evolves With Us</h3>
+        <p>From its Latin roots to its modern usage, "proficient" has undergone a fascinating transformation. It began as a word for <strong>progress and learning</strong>, later evolving to represent <strong>competence and expertise.</strong> While its meaning has shifted, its core idea—advancing in knowledge and skill—remains unchanged.</p>
+        <p>Language is always evolving, and words like "proficient" remind us that how we describe skill and ability reflects broader cultural shifts. The next time you describe yourself as "proficient," you’re using a word with centuries of history behind it—a testament to the enduring power of language.</p>
+    </div>
+</section>
+<div id="footer"></div>
+<script>
+    fetch('/footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+</script>
+</body>
+</html>
